@@ -1,8 +1,15 @@
 <html lang="en">
+<!-- Green #B9EA09 Gray BEBBBB Steel 4C5B5C Purple 2F243A Blue 3D92CC -->
 <head>
     <meta charset="UTF-8">
     <title>Contact Me</title>
     <style>
+
+        body {
+            background-color: #BEBBBB;
+            margin: 0px;
+            padding: 0px;
+        }
         ul {
             float: left;
             width: 100%;
@@ -10,54 +17,50 @@
             margin: 0;
             list-style-type: none;
         }
-
-        a {
+        .nav {
+            margin: 0;
+            padding: 0;
+            width: 100%
+        }
+        .nav a {
+            text-align: center;
             float: left;
-            width: 6em;
+            width: 25%;
             text-decoration: none;
-            color: white;
-            background-color: purple;
-            padding: 0.2em 0.6em;
-            border-right: 1px solid white;
+            color: #4C5B5C;
+            background-color: #B9EA09;
+            padding: 0.4em 0;
+            margin: 0 0 5px 0;
         }
 
         a:hover {
-            background-color: #ff3300;
+            background-color: #A9D608;
         }
 
         li {
             display: inline;
         }
-        .button {
-            font: bold 11px Arial;
-            text-decoration: none;
-            background-color: #EEEEEE;
-            color: #333333;
-            padding: 2px 6px 2px 6px;
-            border-top: 1px solid #CCCCCC;
-            border-right: 1px solid #333333;
-            border-bottom: 1px solid #333333;
-            border-left: 1px solid #CCCCCC;
-        }
 
         .mylink {
             display: block;
-            background-color: #0c6dc4;
-            color: #ffffff;
-            padding: 10px;
+            background-color: #3D92CC;
+            color: #2F243A;
+            padding: 5px;
             text-align: center;
             border-radius: 3px;
             margin-top: 3px;
             text-decoration: none;
         }
-
+        .mylink:hover {
+            background-color: #47ACEF;
+        }
         .formcontainer{
+            color: #2F243A;
             width: 250px;
             margin: 0 auto;
             border: 1px solid;
             padding: 20px;
         }
-
         .row{
             display: flex;
             justify-content: space-between;
@@ -67,15 +70,24 @@
         }
     </style>
 </head>
-<body>
+<body class="front">
 <!-- 3 sections with words and inputs -->
 <div class="nav">
-    <li>
-        <a href="home.html">Home</a>
-        <a href="projects.html">Current Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact Me</a>
-    </li>
+    <ul>
+        <li>
+            <a href="home.html">About</a>
+        </li>
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+        <li>
+            <a href="resume.html">Resume</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+</div>
 </div>
 <div class="formcontainer">
     <h3>Contact Me</h3>
@@ -90,7 +102,7 @@
         </div>
         <div class="row">
             <span>Email: </span>
-            <input type="text" placeholder="Text"/>
+            <input type="email" placeholder="Text"/>
         </div>
         <a href="htmlday1.html" class="mylink">Send</a>
     </form>
