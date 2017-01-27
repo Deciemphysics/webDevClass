@@ -62,4 +62,11 @@ body {
 .mydescription {
     height: 675px;
     margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.descriptioncontent {
+    width: 45%;
+    background-color: #EEEEEE;
+    padding: 10px;
 }
