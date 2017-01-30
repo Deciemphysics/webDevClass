@@ -101,3 +101,48 @@ body {
     padding: 10px;
     width: 65%;
 }
+
+.myprojectscontainer {
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.myprojectlist {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    width: 60%;
+    height: 500px;
+
+
+}
+
+.myprojectdescription {
+    background-color: #EEEEEE;
+    padding: 10px;
+    width: 30%;
+    font-size: 14px;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+
+
+}
+
+.projectbox {
+    background-color: #EEEEEE;
+    padding: 10px;
+    margin: 0;
+    width: 400px;
+    height: 200px;
+    font-size: 14px;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+
+}
