@@ -59,9 +59,27 @@ body {
     justify-content: space-between;
 
 }
+
 #aboutmepage .aboutmelink {
     text-decoration: underline;
 }
+
+#resumepage .resumelink {
+    text-decoration: underline;
+}
+
+#projectspage .projectlink {
+    text-decoration: underline;
+}
+
+#contactpage .contactlink {
+    text-decoration: underline;
+}
+
+#homepage .homelink {
+    text-decoration: underline;
+}
+
 .mydescription {
     height: 675px;
     margin: 15px;
