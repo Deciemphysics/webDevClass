@@ -18,7 +18,7 @@ body {
     border-radius: 10px;
     margin: 0 auto;
     padding: 15px;
-}
+    }
 .navsection a {
     color: #FFF;
     text-decoration: none;
@@ -43,6 +43,7 @@ body {
     border: 1px solid;
     padding: 20px;
     border-radius: 7px;
+    background-color: #eeeeee;
 }
 
 .row{
@@ -65,8 +66,18 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.descriptioncontent {
-    width: 45%;
+.descriptioncontentme {
+
     background-color: #EEEEEE;
     padding: 10px;
+    width: 30%;
+    font-size: 14px;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+}
+
+.descriptioncontent {
+    padding: 10px;
+    width: 65%;
 }
