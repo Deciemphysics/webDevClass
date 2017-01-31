@@ -1,3 +1,8 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
 body {
     background-color: #EEEEEE;
     font-family: 'Bitter', serif;
@@ -39,7 +44,7 @@ body {
 }
 
 .formcontainer{
-    width: 25%;
+    width: 20%;
     margin: 30px auto;
     border: 1px solid;
     padding: 18px;
@@ -116,8 +121,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
-    width: 60%;
-    height: 500px;
+    width: 55%;
 
 
 }
@@ -125,7 +129,7 @@ body {
 .myprojectdescription {
     background-color: #EEEEEE;
     padding: 10px;
-    width: 30%;
+    width: 35%;
     font-size: 14px;
     -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
@@ -137,9 +141,8 @@ body {
 .projectbox {
     background-color: #EEEEEE;
     padding: 10px;
-    margin: 0;
-    width: 400px;
-    height: 200px;
+    margin: 0 0 5px 0;
+    width: 45%;
     font-size: 14px;
     -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);

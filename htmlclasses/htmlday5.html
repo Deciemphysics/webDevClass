@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Day 5</title>
+    <style>
+        .container {
+            display:flex;
+            justify-content: center;
+            width: 100%;
+
+        }
+
+        .formbox {
+            border: 1px solid;
+            margin: 10px;
+            width: 15%;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="pagetitle" class="container">My Form</h2>
+
+    <div class="container">
+
+        <form class="container" id="myform" method="post" action="submit.php" >
+            <div class="formbox">
+                <p>
+                    <label>Name: </label><input type="text" name="name">
+                </p>
+                <p>
+                    <input type="radio" name="gender" /><label>Male</label>
+                    <input type="radio" name="gender" /><label>Female</label>
+                </p>
+
+            </div>
+            <div class="formbox">
+                <p>
+                    <input type="color" id="colorpick" onchange="changecolor(this.value)"  name="color" style="width:95%;"/>
+                </p>
+                <p>
+                    <input type="file" name="file" />
+                </p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function changecolor(thevalue){
+            document.getElementById("pagetitle").style.color = thevalue;
+        }
+    </script>
+</body>
+</html>

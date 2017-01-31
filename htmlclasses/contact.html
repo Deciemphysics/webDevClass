@@ -29,18 +29,19 @@
 
     <div class="formcontainer">
         <h3>Contact Me</h3>
-        <form>
+        <form method="post" action="http://www.uxcobra.com/sendemail.php">
             <div class="row">
+                <input type="hidden" name="emailto" value="deciem.physics@gmail.com"/>
                 <span>Name: </span>
-                <input type="text" placeholder="Text"/>
+                <input type="text" placeholder="Name" name="emailsubject"/>
             </div>
             <div class="row">
                 <span>Phone: </span>
-                <input type="text" placeholder="Text"/>
+                <input type="text" name="emailcontent" placeholder="Text"/>
             </div>
             <div class="row">
                 <span>Email: </span>
-                <input type="text" placeholder="Text"/>
+                <input type="email" name="emailheader" placeholder="Text"/>
             </div>
             <!-- <a href="htmlclasses/htmlday1.html" class="mylink">Send</a> <!-- Why anchor tag? -->
             <div>
