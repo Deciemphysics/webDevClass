@@ -1,0 +1,33 @@
+.mydiv {
+    font-size: 46px;
+    color: #808080;
+    background-color: #0c6dc4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerdiv {
+    background-color: #333333;
+    color: #fff;
+    width: 50%;
+    height: 200px;
+    text-align: center;
+}
+
+body {
+    background-color: #0c6dc4;
+}
+
+.picturediv {
+    color: #fff;
+    font-size: 46px;
+    background-color: black;
+    background-image: url(CSS Day 2/images/bear.png);
+    background-position: 75%;
+    height: 1500px;
+    width: 500px;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
