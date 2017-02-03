@@ -1,94 +1,243 @@
-body {
-    background-color: #BEBBBB;
-    margin: 0px;
-    padding: 0px;
-}
-h2 {
-    padding: 0px;
-    margin: 0px;
-}
-ul {
-    float: left;
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
     width: 100%;
+}
+body {
+    background-color: #1e5799;
+    background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    background: -webkit-linear-gradient(45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: linear-gradient(45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );    font-family: 'Bitter', serif;
+    background-repeat: no-repeat;
+    background-size: length;
+
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 0;
+    height: 100%;
+}
+.navsection {
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: space-between;
+    background-color: #808080;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+
+}
+.projecttitle {
     padding: 0;
     margin: 0;
-    list-style-type: none;
 }
-
-
-p {
-    padding: 0;
-    margin: 0 20px 0 20px;
-}
-
-.nav {
-    margin: 0;
-    padding: 0;
-    width: 100%
-}
-.nav h2 {
-    text-align: center;
-    background-color: #3D92CC;
-    color: #2F243A;
-    padding: 30px 0 30px 0;
-    font-size: 40px;
-    border-bottom: 3px solid #2F243A;
-}
-.nav a {
-    text-align: center;
-    float: left;
-    width: 25%;
+.navsection a {
+    color: #FFF;
     text-decoration: none;
-    color: #4C5B5C;
-    background-color: #B9EA09;
-    padding: 10px 0;
-    margin: 0 0 5px 0;
-}
-.nav a:hover {
-    background-color: #A9D608;
-}
-.nav li {
-    display: inline;
-    border: 1px #4C5B5C; /* why cant I add borders? */
-}
-
-
-.mylink {
+    padding: 10px;
     display: block;
-    background-color: #3D92CC;
-    color: #2F243A;
-    padding: 5px;
+}
+.navlink:hover {
+    background-color: #888888;
+}
+.mylink {
+    background-color: #0c6dc4;
+    color: #ffffff;
+    padding: 10px;
     text-align: center;
     border-radius: 3px;
     margin-top: 3px;
     text-decoration: none;
+    width: 100%;
+    font-size: 11pt;
 }
-.mylink:hover {
-    background-color: #47ACEF;
-}
+
 .formcontainer{
-    color: #2F243A;
-    width: 250px;
-    margin: 0 auto;
+    width: 20%;
+    margin: 30px auto;
     border: 1px solid;
-    padding: 20px;
+    padding: 18px;
+    border-radius: 7px;
+    background-color: #eeeeee;
 }
+
 .row{
     display: flex;
     justify-content: space-between;
+    margin:2px;
 }
-.nav{
-    list-style-type: none;
+.mytitle {
+    font-size: 30px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    background-color: ghostwhite;
+
 }
-.test-bio{
-    background-color: #4C5B5C;
+.titlecontent {
+    padding: 30px 10px;
 }
 
-.bio {
-    width: 1000px;
-    margin: 0 auto 30px auto;
-    padding: 200px 150px;
-    font-size: 40px;
-    background-color: #BEBBBB; /* gotta make this work */
+#aboutmepage .aboutmelink {
+    text-decoration: underline;
+}
 
+#resumepage .resumelink {
+    text-decoration: underline;
+}
+
+#projectspage .projectlink {
+    text-decoration: underline;
+}
+
+#contactpage .contactlink {
+    text-decoration: underline;
+}
+
+#homepage .homelink {
+    text-decoration: underline;
+}
+
+.mydescription {
+    height: 675px;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.descriptioncontentme {
+
+    background-color: #EEEEEE;
+    padding: 10px;
+    width: 35%;
+    font-size: 14px;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+}
+
+.descriptioncontent {
+    padding: 10px;
+    width: 65%;
+}
+
+.myprojectscontainer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+
+}
+
+.myprojectlist {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    width: 60%;
+
+
+}
+
+.myprojectdescription {
+    background-color: #EEEEEE;
+    margin: 0;
+    padding: 10px;
+    width: 40%;
+    font-size: 14px;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.20);
+    box-shadow: 1px 2px 1px rgba(0,0,0,0.20);
+
+}
+
+.projectbox {
+    position: relative;
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    font-size: 20px;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+}
+
+.colorbox {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #089de3;
+    opacity: 0.25;
+    border: 1px solid black;
+}
+
+.colorbox:hover {
+    opacity: 0.0;
+}
+
+.textincolorbox {
+    padding: 10px;
+    color: #FFFFFF;
+    opacity: 1.0;
+
+}
+
+.textprojectbox {
+    position:absolute;
+    top:4px;
+    left:8px;
+    color:#FFF;
+}
+
+.burger {
+    background-image: url("images/burger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+.beach {
+    background-image: url("images/beach.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+.computer {
+    background-image: url("images/computertable.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.coffee {
+    background-image: url("images/mug.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.burgerswitch {
+    display: none;
+}
+
+.footer {
+    width:100%;
+    height: 5%;
+    background-color: ghostwhite;
 }

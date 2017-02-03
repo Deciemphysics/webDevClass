@@ -1,46 +1,55 @@
+<!DOCTYPE html>
 <html lang="en">
-<!-- Green #B9EA09 Gray BEBBBB Steel 4C5B5C Purple 2F243A Blue 3D92CC -->
 <head>
     <meta charset="UTF-8">
     <title>Contact Me</title>
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="main.css">
+
 </head>
-<body>
-<!-- 3 sections with words and inputs -->
-<div class="nav">
-    <ul>
-        <li>
-            <a href="home.html">About</a>
-        </li>
-        <li>
-            <a href="projects.html">Projects</a>
-        </li>
-        <li>
-            <a href="resume.html">Resume</a>
-        </li>
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
-    </ul>
-</div>
-</div>
-<div class="formcontainer">
-    <h3>Contact Me</h3>
-    <form>
-        <div class="row">
-            <span>Name: </span>
-            <input type="text" placeholder="Text"/>
+<body id="contactpage">
+<div class="container">
+
+    <div class="navsection">
+        <a href="index.html" class="homelink navlink">Home</a>
+        <a href="aboutme.html" class="aboutmelink navlink">About Me</a>
+        <a href="projects.html" class="projectlink navlink">Projects</a>
+        <a href="resume.html" class="resumelink navlink">Resume</a>
+        <a href="contact.html" class="contactlink navlink">Contact Me</a>
+
+    </div>
+    <div class="mytitle">
+        <div>
+            <span> </span>
         </div>
-        <div class="row">
-            <span>Phone: </span>
-            <input type="text" placeholder="Text"/>
+        <div>
+            <span> </span>
         </div>
-        <div class="row">
-            <span>Email: </span>
-            <input type="email" placeholder="Text"/>
-        </div>
-        <a href="htmlday1.html" class="mylink">Send</a>
-    </form>
+    </div>
+
+    <div class="formcontainer">
+        <h3>Contact Me</h3>
+        <form method="post" action="http://www.uxcobra.com/sendemail.php">
+            <div class="row">
+                <input type="hidden" name="emailto" value="deciem.physics@gmail.com"/>
+                <span>Name: </span>
+                <input type="text" placeholder="Name" name="emailsubject"/>
+            </div>
+            <div class="row">
+                <span>Phone: </span>
+                <input type="text" name="emailcontent" placeholder="Text"/>
+            </div>
+            <div class="row">
+                <span>Email: </span>
+                <input type="email" name="emailheader" placeholder="Text"/>
+            </div>
+            <!-- <a href="htmlclasses/htmlday1.html" class="mylink">Send</a> <!-- Why anchor tag? -->
+            <div>
+                <input type="submit" class="mylink"  value="Send">
+            </div>
+        </form>
+    </div>
+
 </div>
 </body>
 </html>
