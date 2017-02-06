@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="cssday4.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="topbar">
+        <span>Company Name</span>
+    </div>
+
+    <div class="mainsection">
+        <div class="leftnav">
+            <div class="profile">
+                <div class="profilepic"></div>
+            </div>
+            <div class="mybutton">MY BUTTON</div>
+        </div>
+        <div class="rightcontent">
+            <div class="rightheader"><span>Content Order</span></div>
+            <div class="flexparent">
+                <div id="divcontent">
+                    <div id="content1" style="display: none">
+                        This is for information number 1.
+                    </div>
+                    <div id="content2" style="display: none">
+                        This is for information number 2.
+                    </div>
+                    <div id="content3" style="display: none">
+                        This is for information number 3.
+                    </div>
+                </div>
+                <div>
+                    <div class="box" id="hoverbox1" onmouseover="changecontent(1)">
+                    Mouse here for content 1.
+                    </div>
+                    <div class="box" id="hoverbox2" onmouseover="changecontent(2)">
+                        Mouse here for content 2.
+                    </div>
+                    <div class="box" id="hoverbox3" onmouseover="changecontent(3)">
+                        Mouse here for content 3.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var previous = 1;
+    function changecontent(theid){
+        $("#content" + previous).hide();
+        $("#content" + theid).show();
+        previous = theid;
+    }
+</script>
+</body>
+</html>

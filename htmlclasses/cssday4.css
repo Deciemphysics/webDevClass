@@ -1,0 +1,98 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background-color: #e5e8ec;
+}
+.container{
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 50px auto;
+    -webkit-box-shadow: 0px 0px 22px -4px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 0px 22px -4px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 22px -4px rgba(0,0,0,0.53);
+}
+.topbar{
+    height: 7%;
+}
+.topbar span{
+    color: #fea375;
+    padding: 11px;
+    display:block;
+}
+.mainsection{
+    display:flex;
+    height: 93%;
+}
+.leftnav{
+    background: rgba(244,144,90,1);
+    background: -moz-linear-gradient(top, rgba(244,144,90,1) 0%, rgba(254,126,117,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(244,144,90,1)), color-stop(100%, rgba(254,126,117,1)));
+    background: -webkit-linear-gradient(top, rgba(244,144,90,1) 0%, rgba(254,126,117,1) 100%);
+    background: -o-linear-gradient(top, rgba(244,144,90,1) 0%, rgba(254,126,117,1) 100%);
+    background: -ms-linear-gradient(top, rgba(244,144,90,1) 0%, rgba(254,126,117,1) 100%);
+    background: linear-gradient(to bottom, rgba(244,144,90,1) 0%, rgba(254,126,117,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4905a', endColorstr='#fe7e75', GradientType=0 );
+    height: 100%;
+    width: 18%;
+}
+.rightcontent{
+    width: 82%;
+}
+
+.rightheader{
+    width: 100%;
+    background-color: #c5ccd4;
+    color: #FFF;
+    font-size: 24px;
+}
+.rightheader span{
+    padding: 12px;
+    display:block;
+}
+.profile{
+    border-bottom: 1px solid #ffbda1;
+}
+.profilepic{
+    background-image: url("images/9k=.jpg");
+    width: 50px;
+    height: 50px;
+    border-radius: 60px;
+    margin: 40px auto;
+    background-size: cover;
+}
+
+.mybutton {
+    margin: 25px auto;
+    /* background-color: green; */
+    width: 60%;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+
+}
+
+.divcontent {
+    width: 200px;
+    padding: 15px;
+    border: 1px black solid;
+}
+
+.flexparent {
+    display: flex;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 10px;
+}
