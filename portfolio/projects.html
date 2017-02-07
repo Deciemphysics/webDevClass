@@ -39,12 +39,21 @@
                 blandit sit amet odio in sollicitudin. Fusce fringilla molestie urna. Pellentesque mauris nunc,
                 placerat eu libero nec, fermentum venenatis quam. </span>
             </div>
-            <div id="content2">
-                <span>Text about burgers here.</span>
+            <div id="content2" style="display:none">
+                <span>Text about coffee here. beans brews bears mugs black</span>
+            </div>
+            <div id="content3" style="display:none">
+                <span>Text about burgers meat meat meat </span>
+            </div>
+            <div id="content4" style="display:none">
+                <span>Computers devel asldkfjoaicnawle;rlaskdfgj;nl;b;ald</span>
+            </div>
+            <div id="content5" style="display:none">
+                <span>BOX BOX BOX BO BOB OBOCOBOC </span>
             </div>
         </div>
         <div class="myprojectlist">
-            <div class="projectbox coffee">
+            <div id="hoverbox2" class="projectbox coffee" onmouseover="changecontent(2)" onmouseout="changecontent(1)">
                 <div class="colorbox">
                     <div class="textincolorbox">
                     </div>
@@ -53,7 +62,7 @@
                     <span>Coffee</span>
                 </div>
             </div>
-            <div class="projectbox burger">
+            <div id="hoverbox3" class="projectbox burger" onmouseover="changecontent(3)" onmouseout="changecontent(1)">
                 <div class="colorbox">
                     <div class="textincolorbox">
                                             </div>
@@ -62,7 +71,7 @@
                     <span>Burgers</span>
                 </div>
             </div>
-            <div class="projectbox computer">
+            <div id="hoverbox4" class="projectbox computer" onmouseover="changecontent(4)" onmouseout="changecontent(1)">
                 <div class="colorbox">
                     <div class="textincolorbox">
                     </div>
@@ -71,7 +80,7 @@
                     <span>Computer</span>
                 </div>
             </div>
-            <div class="projectbox beach">
+            <div id="hoverbox5" class="projectbox beach" onmouseover="changecontent(5)" onmouseout="changecontent(1)">
                 <div class="colorbox">
                     <div class="textincolorbox">
                     </div>
@@ -86,5 +95,13 @@
 
     </div>
 </div>
+<script>
+    var previous = 1;
+    function changecontent(index){
+        $("#content" + previous).hide();
+        $("#content" + index).show();
+        previous = index;
+    }
+</script>
 </body>
 </html>

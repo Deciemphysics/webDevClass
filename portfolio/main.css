@@ -78,12 +78,15 @@ body {
     margin: 0;
     display: flex;
     justify-content: space-between;
-    height: 10%;
+    height: 8%;
     background-color: ghostwhite;
+}
 
+.title {
+    padding: 20px 10px;
 }
 .titlecontainer {
-    padding: 30px 10px;
+    padding: 20px 10px;
 }
 
 #aboutmepage .aboutmelink {
@@ -133,7 +136,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: space-around;
-    height: 80%;
+    height: 82%;
 
 }
 
@@ -183,6 +186,7 @@ body {
     background-color: #089de3;
     opacity: 0.25;
     border: 1px solid black;
+    transition: all 0.15s;
 }
 
 .colorbox:hover {
@@ -241,4 +245,12 @@ body {
     width:100%;
     height: 5%;
     background-color: ghostwhite;
+}
+
+@media (max-width: 600px) {
+
+    .projectbox {
+        width:100%;
+    }
+
 }
