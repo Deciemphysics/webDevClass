@@ -12,7 +12,6 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
     font-family: 'Bitter', serif;
     background-repeat: no-repeat;
-    background-size: length;
 
 }
 .container {
@@ -247,7 +246,7 @@ body {
     background-color: ghostwhite;
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 992px) {
 
     .projectbox {
         width:100%;
