@@ -27,6 +27,7 @@ body {
     box-shadow: 1px 2px 1px rgba(0,0,0,.2);
 
 }
+
 .projecttitle {
     padding: 0;
     margin: 0;
@@ -51,7 +52,7 @@ body {
 }
 
 .formcontainer{
-    width: 20%;
+    width: 25%;
     margin: 30px auto;
     border: 1px solid;
     padding: 18px;
@@ -129,9 +130,10 @@ body {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     width: 55%;
-
-
 }
+
+
+
 
 .myprojectdescription {
     background-color: #EEEEEE;
@@ -213,4 +215,34 @@ body {
     background-size: cover;
 
 
+}
+
+/* This section is for the resume page */
+
+.resumeflexbox {
+
+}
+.resumebox {
+
+}
+.r-header {
+
+}
+.r-qualif {
+
+}
+.r-body {
+
+}
+.resumedownload {
+
+}
+
+/* This section is for the landing(index) page */
+
+.indexcontainer {
+    height: 82%;
+    background-color: #EEEEEE;
+    margin: 0;
+    padding: 0;
 }

@@ -192,10 +192,12 @@ body {
     opacity: 0.0;
 }
 
-.textincolorbox {
-    padding: 10px;
-    color: #FFFFFF;
-    opacity: 1.0;
+.indexanchor {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+
 
 }
 
@@ -252,4 +254,57 @@ body {
         width:100%;
     }
 
+}
+
+/* This is section is for the index page */
+
+.indexcontainer {
+    height: 82%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0c6dc4;
+}
+
+.aboutnavbox {
+    background-image: url("images/mug.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.projectnavbox {
+    background-image: url("images/computertable.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.resumenavbox {
+    background-image: url("images/paper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.contactmenavbox {
+    background-image: url("images/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.indexbox {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: /*#089de3*/ #111;
+    opacity: 0.35;
+    border: 1px solid black;
+    transition: all 0.15s;
+}
+
+.indexbox:hover {
+    opacity: 0.0;
 }
