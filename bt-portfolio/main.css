@@ -1,0 +1,121 @@
+body, html {
+    background-color: #1e5799;
+    background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    background: -webkit-linear-gradient(45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    background: linear-gradient(45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+    font-family: 'Lato', sans-serif;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+
+.container {
+    background-color: ghostwhite;
+}
+
+.navsection {
+    background-color: #808080;
+    padding: 10px;
+}
+.navsection a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+.navlink:hover {
+    background-color: #888888;
+}
+
+.titlecontent {
+    padding: 10px;
+    padding-top: 0;
+    font-size: 30px;
+}
+.rightalign {
+    text-align: right;
+}
+
+.descriptioncontent {
+    background-color: #EEEEEE;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+    padding-top:10px;
+    height: 750px;
+}
+.nav-container {
+    padding: 0;
+}
+.nav-radius {
+    border-radius: 2px;
+}
+
+.test {
+    background-color: red;
+    height: 300px;
+}
+
+.projectbox {
+    height:350px;
+    position: relative;
+    color: #FFF;
+    padding: 0;
+    margin: 0;
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+}
+
+.colorbox {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #089de3;
+    opacity: 0.25;
+    border: 1px solid black;
+    transition: all 0.15s;
+}
+
+.colorbox:hover {
+    opacity: 0.0;
+}
+
+.textprojectbox {
+    position:absolute;
+    top:4px;
+    left:8px;
+    color:#FFF;
+}
+
+.burger {
+    background-image: url("images/burger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+.beach {
+    background-image: url("images/beach.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+.computer {
+    background-image: url("images/computertable.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.coffee {
+    background-image: url("images/mug.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
