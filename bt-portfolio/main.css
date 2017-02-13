@@ -6,11 +6,13 @@ body, html {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
     font-family: 'Lato', sans-serif;
     background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100%;
 }
 
 .container {
     background-color: ghostwhite;
+    height: 100%;
 }
 
 .navsection {
@@ -42,8 +44,12 @@ body, html {
     -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
     box-shadow: 1px 2px 1px rgba(0,0,0,.2);
     padding-top:10px;
-    height: 750px;
+    min-height: 800px;
+
 }
+
+
+
 .nav-container {
     padding: 0;
 }
@@ -57,14 +63,11 @@ body, html {
 }
 
 .projectbox {
-    height:350px;
     position: relative;
     color: #FFF;
     padding: 0;
     margin: 0;
-    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.75);
-    box-shadow: 1px 2px 1px rgba(0,0,0,.2);
+    height: 400px;
 }
 
 .colorbox {
@@ -92,30 +95,38 @@ body, html {
 
 .burger {
     background-image: url("images/burger.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
+
 
 
 }
 .beach {
     background-image: url("images/beach.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
+
 
 
 }
 .computer {
     background-image: url("images/computertable.jpeg");
-    background-repeat: no-repeat;
     background-size: cover;
+
 
 
 }
 
 .coffee {
     background-image: url("images/mug.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
 
 
+
+}
+
+.mypic {
+    image-size: cover;
+}
+
+.testfill {
+    height: 100%;
 }
