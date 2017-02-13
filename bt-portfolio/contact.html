@@ -28,9 +28,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="aboutme.html">About<span class="sr-only">(current)</span></a></li>
-                <li class="active"><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
 
 
             </ul>
@@ -41,7 +41,34 @@
 <div class="container">
     <div class="row mytitle">
         <div class="col-xs-6 titlecontent">
-            <span>My Work</span>
+            <span>Contact Me</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 descriptioncontent">
+            <form class=form-horizontal" method="post" action="http://www.uxcobra.com/sendemail.php">
+                <div class="form-group">
+
+                    <input type="hidden" name="emailto" value="deciem.physics@gmail.com"/>
+                    <label for="inputname" class="col-sm-2 control-label">Name:</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputname" type="text" placeholder="Your Name" name="emailsubject"/>
+                    </div>
+                <div class="form-group">
+                    <label for="inputemail" class="col-sm-2 control-label">Email:</label>
+                    <div class="col-sm-10">
+                    <input id="inputemail" class="form-control" type="email" name="emailheader" placeholder="example@email.com"/>
+                    </div>
+                </div>
+                    <label for="inputtext" class="control-label col-sm-2">Message Me:</label>
+                    <div class="col-sm-10">
+                        <textarea id="inputtext" class="form-control" rows="3" name="emailcontent" placeholder="Send me a message"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-8">
+
         </div>
     </div>
 
@@ -49,6 +76,7 @@
 
 
 
+<!--
     <div class="formcontainer">
         <h3>Contact Me</h3>
         <form method="post" action="http://www.uxcobra.com/sendemail.php">
@@ -65,12 +93,13 @@
                 <span>Email: </span>
                 <input type="email" name="emailheader" placeholder="Text"/>
             </div>
-            <!-- <a href="htmlclasses/htmlday1.html" class="mylink">Send</a> <!-- Why anchor tag? -->
+            &lt;!&ndash; <a href="htmlclasses/htmlday1.html" class="mylink">Send</a> &lt;!&ndash; Why anchor tag? &ndash;&gt;
             <div>
                 <input type="submit" class="mylink"  value="Send">
             </div>
         </form>
     </div>
+-->
 
 </div>
 </body>
