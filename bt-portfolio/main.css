@@ -76,6 +76,14 @@ body, html {
     box-shadow: 1px 1px 1px rgba(0,0,0,.2);
 
 }
+
+@media screen and (max-width: 992px) {
+
+    .projectbox {
+       height: 200px;
+    }
+
+}
 .buttonbox {
     margin: 13px;
 }
@@ -85,8 +93,19 @@ body, html {
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: #089de3;
-    opacity: 0.25;
+    background-color: #111;
+    opacity: 0.35;
+    transition: all 0.20s;
+}
+
+.indexbox {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #111;
+    opacity: 0.35;
     transition: all 0.20s;
 }
 
@@ -94,11 +113,22 @@ body, html {
     opacity: 0.0;
 }
 
+.indexbox:hover {
+    opacity: 0.0;
+}
+
+.indexanchor {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: default;
+}
 .textprojectbox {
     position:absolute;
     top:4px;
     left:8px;
     color:#FFF;
+    font-size: 16px;
 }
 
 .burger {
@@ -131,10 +161,38 @@ body, html {
 
 }
 
+.aboutnavbox {
+    background-image: url("images/mug.jpg");
+    background-size: cover;
+
+}
+
+.projectnavbox {
+    background-image: url("images/computertable.jpeg");
+    background-size: cover;
+}
+
+.resumenavbox {
+    background-image: url("images/paper.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+.contactmenavbox {
+    background-image: url("images/contact.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
 .mypic {
     image-size: cover;
 }
 
 .testfill {
     height: 100%;
+}
+
+.dl-button {
+    margin-right: 10px;
 }
