@@ -1,0 +1,21 @@
+How is JS loaded in a page?
+
+
+
+How is a page inline or externally loaded?
+
+
+
+What is strict?
+
+
+jS--
+1995
+Used in all internet browsers
+
+Hilevel
+dynamic
+untyped
+interpreted
+
+Everyone uses js5, not js6. js6 came out 2 years(?) ago

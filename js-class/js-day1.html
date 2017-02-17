@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+    <div id="inline">
+        Click me
+    </div>
+    <div id="loaded">
+        Don't click me
+    </div>
+<script>
+    var inlineDiv = document.getElementById('inline');
+    inlineDiv.style.cursor = 'pointer';
+    inlineDiv.onclick = function () {
+        inlineDiv.innerText = 'This was added with JS';
+        inlineDiv.style.color = 'green';
+    };
+
+</script>
+
+
+
+<!--<script>
+    function greeting(msg){
+        var sum = i + i;
+        if(sum == 2);
+        for(var i=0; i<3; i++);
+        alert(msg + ' ' + i);
+    }
+    greeting('Hello, it\'s me.');
+</script>-->
+<script type="text/javascript" src="js-day1.js"></script>
+
+</body>
+</html>
