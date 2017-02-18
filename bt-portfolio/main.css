@@ -15,24 +15,12 @@ body, html {
     height: 100%;
 }
 
-.navsection {
-    background-color: #808080;
-    padding: 10px;
-}
-.navsection a {
-    color: #FFF;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-.navlink:hover {
-    background-color: #888888;
-}
+
 
 .titlecontent {
     padding: 10px;
     padding-top: 0;
-    font-size: 30px;
+    font-size: 33px;
 }
 .rightalign {
     text-align: right;
@@ -76,7 +64,9 @@ body, html {
     box-shadow: 1px 1px 1px rgba(0,0,0,.2);
 
 }
-
+.left-box-shadow {
+    box-shadow: -1px 1px 1px rgba(0,0,0,.2);
+}
 @media screen and (max-width: 992px) {
 
     .projectbox {
@@ -132,7 +122,7 @@ body, html {
 }
 
 .burger {
-    background-image: url("images/burger.jpg");
+    background-image: url("images/portfolio.jpg");
     background-size: cover;
 
 
@@ -189,6 +179,23 @@ body, html {
     image-size: cover;
 }
 
+.mypic-cont {
+    display: flex;
+    justify-content: center;
+
+}
+.profpic {
+
+    height: 250px;
+
+
+
+}
+.profilepic {
+
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 50%;
+}
 .testfill {
     height: 100%;
 }
