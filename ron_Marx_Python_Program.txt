@@ -1,0 +1,258 @@
+#-----------------------------------------------------------------
+# G e n e r a l  I n f o r m a t i o n
+#-----------------------------------------------------------------
+# Name: bullet.py
+#
+# Usage: Bullet analysis.
+#
+# Description: From a list of bullet specifications from 
+# 			   manufacturers data sheets, will create a graph of 
+# 			   two 'best' bullets, on account of uncertainty of 
+#			   the bullet on hitting its target versus the distance 
+#			   they travel.
+#
+# Inputs: Datafile name. Ex) python bullet.py bullet_data.txt
+#
+# Outputs: best_bullet.png
+#
+##
+# Special Instructions: Please source bullet number to list of 
+#					    bullets via manufacturers sheet to gather 
+#					    name of bullet.
+#
+#------------------------------------------------------------------
+# C o d e  H i s t o r y
+#------------------------------------------------------------------
+# Version: 1.2
+#
+# Author(s): Ron Marx (rkm)
+#			 deciem@comcast.net
+#
+# Modifactions:
+# 12/4/12 - First Edition (ronmarx)
+# 12/7/12 - Edited program to be more user friendly
+# 12/12/12 - Edited and finalized program, including plot functions
+
+#------------------------------------------------------------------
+# I m p o r t  L i b r a r i e s
+#------------------------------------------------------------------
+
+import sys
+import matplotlib
+import matplotlib.pylab as plot
+import math as m
+import numpy as np
+import random
+#-------------------------------------------------------------------
+# F u n t i o n s
+#-------------------------------------------------------------------
+def square(values):
+	return [element**2 for element in values]
+def average(values):
+	return sum(values) / float(len(values))
+def standardDeviation(values):
+	mean = average(values)
+	differences = [(value - mean)**2 for value in values]
+	return average(differences) ** 0.5
+# I need to have functions to:
+#	Pull the data I want from files, and organize them into lists
+def getData (datafile):
+	velList = []
+	energyList = []
+	bulletFile = open(datafile, 'r')
+	# THIS IS IF I CAN GET MUZZLE VELOCITY
+	for line in bulletFile:
+		data = line.split()
+		try:
+			velocity = float(data[2]) # Command to pull data I need out. Will append into files.
+			energy = float(data[8])
+			velList.append(velocity * 0.3048)
+			energyList.append(energy * 1.3558)
+		except:
+			print "Tossing line", line
+	bulletFile.close()
+	return velList, energyList
+	
+
+
+# After which, I need to process my data.
+#	I need to analyze efficiency of load versus caliber
+#		To do this, I will look at energy conversion, by velocity of the bullet as it leaves the barrel, to find out how much energy is converted
+#			to velocity for the bullet
+def makeBullet (velList,energyList):
+	rhoLead = 11.34 * 1000 # kg / m**3
+	massBullet = []
+	diaBullet = []
+	n = 0
+	while n < len(energyList):
+		mass = energyList[n] * 2 / (velList[n] ** 2)
+		diameter = (mass / rhoLead)**(1.0/3)# MODIFY THIS FOR ENERGY CONSIDERTIONS
+		massBullet.append(mass)
+		diaBullet.append(diameter)
+		n += 1
+	return massBullet, diaBullet
+
+def timeToDrop ():
+	time = m.sqrt(1.524 * 2 / 9.8)
+	return time
+
+#		After which, I will plot efficiency of caliber per unit load versus energy transfer of the bullet
+# Once I know the effieciency of my various bullets:
+#	I will be able to separate the four to five 'best' bullets, based on efficiency, and run simulation data on them to find accuracy
+#	To find accuracy, I will:
+#		Run a simulation of a set distance multiple times with varying random windspeeds/drifts to calculate uncertainty over distance.
+#		Knowing the drift, I can find the uncertainty of the accuracy of my bullet, and find the 'best' bullet.
+
+
+def winddrift (listA,massBullet,diaBullet,time):
+	minUncert = []
+	placeholder = []
+	n4 = 100
+	while n4 <= 550:
+		n2 = 0
+		count = 100
+		n3 = 1
+		delTime = 0.01
+		uncert = []
+		while n2 < len(listA):
+			uncert100cont = []
+			drag1 = 1.55 * diaBullet[n2] * 10 ** -4
+			drag2 = 0.22 * (diaBullet[n2] ** 3)
+			n3 = 0
+			while n3 <= 100:
+				position = 0
+				velocity = 0
+				timeTrav = 0
+				wind = random.uniform(-5,5)
+				if massBullet[n2]*((2.7182**(drag2*n4/massBullet[n2]))-1)/(drag2*listA[n2]) < time:	
+					while timeTrav < massBullet[n2]*((2.7182**(drag2*n4/massBullet[n2]))-1)/(drag2*listA[n2]):
+						acceleration = drag2*wind*wind/massBullet[n2]
+						velocity = velocity + acceleration*delTime
+						position = position + velocity*delTime + acceleration * (delTime**2) / 2
+						timeTrav = timeTrav + delTime
+					n3 += 1
+				else:
+					n3 += 1
+				uncert100cont.append(position)
+			uncert.append(standardDeviation(uncert100cont))
+
+			n2 += 1
+		minUncert.append(min(uncert))
+		placeholder.append(uncert.index(min(uncert)))
+		
+		n4 += 10
+	return minUncert, placeholder 
+def count (placeholder):
+	counter = {}
+	for value in placeholder:
+		if value in counter:
+			counter[value] += 1
+		else:
+			counter[value] = 1
+	commonValue = sorted(counter, key = counter.get, reverse = True)
+	top2 = commonValue[:2]
+	return top2
+	
+#HOME STRETCH
+
+def makefinallists1(top2, listA, massBullet,diaBullet,time):
+	count1 = top2[0]
+	uncertHold1 = []
+	n4 = 100
+	uncertHold1.append(0)
+	while n4 <= 550:
+		n2= count1
+		delTime = 0.01
+		uncert100cont = []
+		drag1 = 1.55 * diaBullet[n2] * 10 ** -4
+		drag2 = 0.22 * (diaBullet[n2] ** 3)
+		n3 = 0
+		while n3 <= 100:
+			position = 0
+			velocity = 0
+			timeTrav = 0
+			wind = random.uniform(-10,10)
+			if massBullet[n2]*((2.7182**(drag2*n4/massBullet[n2]))-1)/(drag2*listA[n2]) < time:	
+				while timeTrav < massBullet[n2]*((2.7182**(drag2*n4/massBullet[n2]))-1)/(drag2*listA[n2]):
+					acceleration = drag2*wind*wind/massBullet[n2]
+					velocity = velocity + acceleration*delTime
+					position = position + velocity*delTime + acceleration * (delTime**2) / 2
+					timeTrav = timeTrav + delTime
+				n3 += 1
+			else:
+				n3 += 1
+			uncert100cont.append(position)
+		uncertHold1.append(standardDeviation(uncert100cont))
+		n4 += 10
+	return uncertHold1
+	
+def makefinallists2(top2, listA, massBullet,diaBullet,time):
+	count2 = top2[1]
+	uncertHold2 = []
+	n4 = 100
+	uncertHold2.append(0)
+	while n4 <= 550:
+		n2= count2
+		delTime = 0.01
+		uncert100cont = []
+		drag1 = 1.55 * diaBullet[n2] * 10 ** -4
+		drag2 = 0.22 * (diaBullet[n2] ** 3)
+		n3 = 0
+		while n3 <= 100:
+			position = 0
+			velocity = 0
+			timeTrav = 0
+			wind = random.uniform(-10,10)
+			if massBullet[n2]*((2.7182**(drag2*n4/massBullet[n2]))-1)/(drag2*listA[n2]) < time:	
+				while timeTrav < massBullet[n2]*((2.7182**(drag2*n4/massBullet[n2]))-1)/(drag2*listA[n2]):
+					acceleration = drag2*wind*wind/massBullet[n2]
+					velocity = velocity + acceleration*delTime
+					position = position + velocity*delTime + acceleration * (delTime**2) / 2
+					timeTrav = timeTrav + delTime
+				n3 += 1
+			else:
+				n3 += 1
+			uncert100cont.append(position)
+		uncertHold2.append(standardDeviation(uncert100cont))
+		n4 += 10
+	return uncertHold2
+def makeDistance():
+	distance = []
+	distance.append(0)
+	n4 = 100
+	while n4 <= 550:
+		distance.append(n4)
+		n4 += 10
+	return distance
+	
+def plotGraphs(uncertHold1,uncertHold2,distance,top2):
+	plot.figure()
+	plot.plot(distance,uncertHold1)
+	plot.plot(distance,uncertHold2)
+	plot.title('Optimal Bullet Uncertainty Per Distance Travelled')
+	plot.ylabel('Uncertainty')
+	plot.xlabel('Distance Travelled')
+	plot.legend(['Bullet Number ' + str(top2[0] + 1),  'Bullet Number ' + str(top2[1] + 1)])
+	plot.axis([0,400,0,0.00012])
+	plot.savefig('best_bullet.png')
+			
+#-----------------------------------------------------------------------------				
+# M a i n   P r o g r a m
+#-----------------------------------------------------------------------------	
+try: 
+	datafile = sys.argv[1]
+except (ValueError, IndexError),e:
+	print e
+	sys.exit()
+velList, energyList = getData(datafile)
+massBullet, diaBullet = makeBullet(velList,energyList)
+time = timeToDrop()
+minUncert, placeholder  = winddrift (velList, massBullet, diaBullet,time)
+top2 = count(placeholder)
+uncertHold1 = makefinallists1(top2,velList, massBullet,diaBullet,time)
+uncertHold2 = makefinallists2(top2,velList, massBullet,diaBullet,time)
+distance = makeDistance()
+plotGraphs(uncertHold1,uncertHold2,distance,top2)
+
+
+#	Once I know the uncertainty, plot the uncertainy as a funciton of distance# 
