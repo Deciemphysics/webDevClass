@@ -55,7 +55,7 @@ myGarage.sort();
 
 myGarage.splice(1, 1, 'tesla'); // ['bmw', 'tesla', 'camaro']
 
-*/
+
 
 var numArray = [];
 for (i = 1; i < 100; i ++) {
@@ -63,15 +63,26 @@ for (i = 1; i < 100; i ++) {
 }
 
 console.log(numArray[(Math.floor(numArray.length*Math.random()))]);
+*/
 // I need to finished this.
+
+
+// This matrix must be a 2x2 or it breaks
 var array1 = [[1,2],[3,4]];
-var arrayFinal = [[],[]];
-var g = h = j = k = 0
-for (i = 0; i < array1.length; i++) {
+var array2 = [[5,6],[7,8]];
+var arrayFinal = [[0,0],[0,0]];
+var g = 0;
+var h = 0;
+var j = 0;
+  // double check that rows equal columns for an array of any length
+    for (var g in array1[g]){
+        for (var h in array1[h]){
+            for (var j in array2[j]){
+                arrayFinal[g][j] = arrayFinal[g][j] + ( array1[g][h] + array2[h][j] );
+            }
 
+        }
+    }
 
-
-
-}
 
 console.log(arrayFinal);
