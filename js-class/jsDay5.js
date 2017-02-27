@@ -67,22 +67,33 @@ console.log(numArray[(Math.floor(numArray.length*Math.random()))]);
 // I need to finished this.
 
 
-// This matrix must be a 2x2 or it breaks
-var array1 = [[1,2],[3,4]];
-var array2 = [[5,6],[7,8]];
-var arrayFinal = [[0,0],[0,0]];
-var g = 0;
-var h = 0;
-var j = 0;
-  // double check that rows equal columns for an array of any length
-    for (var g in array1[g]){
-        for (var h in array1[h]){
-            for (var j in array2[j]){
-                arrayFinal[g][j] = arrayFinal[g][j] + ( array1[g][h] + array2[h][j] );
+
+var array1 = [[1,2,3],[4,5,6],[7,8,9]];
+var array2 = [[1,2],[4,5],[7,8]];
+var arrayFinal = [];
+
+
+// My function can only work if the columns in array1 equal the rows in array2
+if ( array1[0].length == array2.length){
+
+
+    for (var g = 0; g < array1.length; g++){ // Fill the array final with proper number of empty arrays
+        arrayFinal[g] = [];
+        for (var h = 0; h < array1[g].length; h++){
+            for (var j = 0; j < array2[g].length; j++){
+                if ( arrayFinal[g][j] === undefined ){ // Double check if there is anything in my array
+                    arrayFinal [g][j] = array1[g][h] * array2[h][j];
+                }
+                else {
+                    arrayFinal[g][j] = arrayFinal[g][j] + ( array1[g][h] * array2[h][j] );
+                }
             }
 
         }
     }
+    console.log(arrayFinal);
+} else {
+    console.log('You cannot take the dot product.')
+}
 
 
-console.log(arrayFinal);
