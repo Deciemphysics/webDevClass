@@ -77,10 +77,10 @@ var arrayFinal = [];
 if ( array1[0].length == array2.length){
 
 
-    for (var g = 0; g < array1.length; g++){ // Fill the array final with proper number of empty arrays
+    for ( var g = 0; g < array1.length; g++ ){ // Fill the array final with proper number of empty arrays
         arrayFinal[g] = [];
-        for (var h = 0; h < array1[g].length; h++){
-            for (var j = 0; j < array2[g].length; j++){
+        for ( var h = 0; h < array1[g][h].length; h++ ){
+            for ( var j = 0; j < array2[h][j].length; j++ ){
                 if ( arrayFinal[g][j] === undefined ){ // Double check if there is anything in my array
                     arrayFinal [g][j] = array1[g][h] * array2[h][j];
                 }

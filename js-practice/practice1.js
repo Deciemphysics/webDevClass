@@ -86,3 +86,45 @@ do {
 
 } while (numOfCustomers > 0);
 */
+
+// on this
+// this points to an object. NOT the function
+
+function foo() {
+    console.log( this.bar );
+}
+var bar = "global";
+var obj1 = {
+    bar: "obj1",
+    foo: foo
+};
+var obj2 = {
+    bar: "obj2"
+};
+
+// ---------------
+
+foo(); // "global"
+obj1.foo(); // "obj1"
+foo.call( obj2 ); // "obj2"
+new foo(); // und
+
+// Prototype operators
+
+var foo = {
+    a: 42
+}
+
+var bar = Object.create( foo );
+bar.b = "hello world";
+
+bar.b; // hello world
+bar.a; // 42
+
+
+function foo(a = 3) {
+    console.log (a);
+}
+
+foo(); //3
+foo(42); //42
