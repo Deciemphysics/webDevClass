@@ -122,9 +122,9 @@ bar.b; // hello world
 bar.a; // 42
 
 
-function foo(a = 3) {
-    console.log (a);
-}
+//function foo(a=3) {
+//    console.log(a);
+//}
 
-foo(); //3
-foo(42); //42
+//foo(); //3
+//foo(42); //42
