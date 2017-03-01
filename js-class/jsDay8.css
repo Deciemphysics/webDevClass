@@ -1,0 +1,28 @@
+
+
+.myNav {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #DDD;
+    justify-content: flex-end;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+}
+
+.iconImage {
+   position: relative;
+}
+.iconImage .glyphicon {
+    padding: 15px;
+}
+
+.popup {
+    position: absolute;
+    z-index: 999;
+    top: 50px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+    background-color: #EEEEEE;
+    padding: 15px;
+    right: 12px;
+}
