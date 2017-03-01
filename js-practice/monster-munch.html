@@ -21,7 +21,9 @@
         #commentcontainer{position:absolute; bottom: 90px; left: 95px; border-radius: 5px; height: 45px; width: 150px;}
         .redbtn{ background-color: #C05A5C;}
         .greenbtn{ background-color: #81B860;}
-        #score{color: #ffffff;}
+        #score{color: #ffffff; position:absolute; top: 106px; left: 95px; text-align: center; padding: 0px;}
+        .scoreTitle{margin: 0; padding: 0; font-size: 27px;}
+        #scoreContent{}
 
     </style>
 </head>
@@ -32,7 +34,10 @@
 <div id="container">
     <div id="gamecontainer">
 
-        <div id="score"></div>
+        <div id="score">
+            <p class="scoreTitle">Score:</p>
+            <p class="scoreTitle" id="scoreContent"></p>
+        </div>
         <div id="foodcontainer"><p id="foodbox"></p></div>
         <div id="buttoncontainer"><a class="greenbtn" href="javascript: eatit()">Eat it</a><a class="redbtn" href="javascript: trashit()">Trash it</a></div>
         <div id="commentcontainer"><p id="commentbox"></p></div>
