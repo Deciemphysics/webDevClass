@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        .cardContainer {
+            background-color: #FFF;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="cardContainer">
+        <p id="myname"></p>
+        <p id="mytitle"></p>
+        <p id="myhomeworld">Homeworld: </p>
+        <p id="myemail"></p>
+        <img src="#" id="myheadshot"/>
+        <p id="reflect"></p>
+    </div>
+<script>
+    var chewbacca = {name: 'Chewbacca', title: 'Chief Maintenance Officer', homeWorld: 'Kashyyyk', email: 'hansbff@hotmail.com', headshot: 'images/card.png'};
+    document.getElementById("myname").innerHTML = chewbacca.name;
+    document.getElementById("mytitle").innerHTML = chewbacca.title;
+    document.getElementById("myhomeworld").innerHTML = chewbacca.homeWorld;
+    document.getElementById("myemail").innerHTML = chewbacca.email;
+    document.getElementById("myheadshot").src = chewbacca.headshot;
+    function Fish(){
+        this.speed = 5;
+        this.scales = "orange";
+    }
+    var myFish = new Fish();
+    function Reflector(obj){
+        this.getAllProperties = function () {
+            var properties = [];
+            for (var prop in obj){
+                properties.push(prop);
+            }
+            return properties;
+        };
+
+    }
+    var reflected = new Reflector(myFish);
+    document.getElementById("reflect").innerHTML = reflected.getAllProperties().join('<br />');
+</script>
+<script type="text/javascript" src="jsDay9.js"></script>
+</body>
+</html>

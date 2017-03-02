@@ -51,13 +51,13 @@ function trashit(){
     //if the food is good
     if(currentfood == "Apple" || currentfood == "Banana" || currentfood == "Milk" || currentfood == "Lettuce" || currentfood == "Medicine" || currentfood == "Cranberry Juice"){
         document.getElementById("commentbox").innerHTML = "Good! Me no want that!";
-        score += 1;
+        score = score + 1;
         rungame();
     }
     // if the food is bad
     else{
         document.getElementById("commentbox").innerHTML = "Why you throw that away!?";
-        score -= 1;
+        score = score - 1;
         rungame();
     }
 
