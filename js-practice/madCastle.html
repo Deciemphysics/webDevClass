@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .gamecontainer {
+        width: 600px;
+        height: 500px;
+        background-color: black;
+        position: relative;
+    }
+    .myButt{
+        text-decoration: none;
+        display: block;
+        padding: 12px;
+        margin: 10px;
+        color: #FFF;
+        background-color: #444;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 3px;
+    }
+    #btnContainer {
+        width: 300px;
+        height: 200px;
+        background-color: #DEDEDE;
+        position: absolute;
+        top: 100px;
+        left: 75px;
+    }
+
+    </style>
+    <script type="text/javascript" src="madCastle.js"></script>
+</head>
+<body onload="mygame.addButton()">
+<div class="gamecontainer">
+        <div id="btnContainer"></div>
+    </div>
+</body>
+</html>
