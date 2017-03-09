@@ -11,7 +11,7 @@ function runcode() {
 function collectholes(player){
     var golfcourse = "";
     for(var h = 1; h <= 18; h++){
-        var hole = "<div id='player" + player +"hole" + h +"'>hole display</div>";
+        var hole = "<div id='player" + player +"hole" + h +"' class='col-xs-6 backgroundDisplay'>hole display</div>";
         golfcourse += hole;
         //console.log(golfcourse);
     }
