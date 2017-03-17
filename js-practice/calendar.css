@@ -1,0 +1,9 @@
+.weekbox{
+    display: flex;
+    justify-content: space-between;
+}
+.daybox{
+    border: 1px black;
+    text-align: center;
+    height: 100px;
+}
