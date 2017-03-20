@@ -1,14 +1,3 @@
-// Working on AJAX day 2! Project is due 3/7
-// Async, allows you to dynamically update the page
-// An event occurs
-//      Create an XMLHttpRequest object
-//      Sends the HttpRequest
-// The server then
-//      Processes the request
-//      Creates and sends a response to the browser
-// Your browser
-//      Processes it using JS
-//      Updates the page content
 var choiceID;
 var courses = {};
 function getCourses() {
